@@ -7,9 +7,10 @@ public class ShoppingCart {
     }
 
     public double calculateTotal() {
-        int sum = 0;
+        double sum = 0;
         for (Product p : products) {
             sum += p.getPrice();
         }
+        return sum;
     }
 }

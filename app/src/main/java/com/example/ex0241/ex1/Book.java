@@ -17,6 +17,6 @@ public class Book extends Product{
     }
     @Override
     public String getDescription() {
-        return super.getDescription() + "and " + this.pages + "pages";
+        return super.getDescription() + "and " + this.pages + " pages";
     }
 }
