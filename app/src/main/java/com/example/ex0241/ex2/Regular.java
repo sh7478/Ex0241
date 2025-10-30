@@ -27,4 +27,10 @@ public class Regular extends Vehicles{
                 ", exhaustPullotPerMin=" + super.getExhaustPullotPerMin() +
                 '}';
     }
+
+    @Override
+    public double exhaust()
+    {
+        return super.exhaust() + (passengerAmount * 2);
+    }
 }

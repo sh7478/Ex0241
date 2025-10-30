@@ -27,4 +27,10 @@ public class Cart extends Light{
                 ", exhaustPullotPerMin=" + super.getExhaustPullotPerMin() +
                 '}';
     }
+
+    @Override
+    public double exhaust()
+    {
+        return super.exhaust() - (this.chargeTime/2.0);
+    }
 }
