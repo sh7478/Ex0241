@@ -33,4 +33,9 @@ public class Regular extends Vehicles{
     {
         return super.exhaust() + (passengerAmount * 2);
     }
+
+    public void noise()
+    {
+        System.out.println("The car volume is 85 decibels");
+    }
 }
