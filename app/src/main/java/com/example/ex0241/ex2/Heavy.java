@@ -26,4 +26,10 @@ public class Heavy extends Vehicles{
                 ", exhaustPullotPerMin=" + super.getExhaustPullotPerMin() +
                 '}';
     }
+
+    @Override
+    public double exhaust()
+    {
+        return super.exhaust() + (500 * trailersAmount);
+    }
 }
