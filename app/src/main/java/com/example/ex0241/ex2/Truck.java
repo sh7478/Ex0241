@@ -1,6 +1,6 @@
 package com.example.ex0241.ex2;
 
-public class Truck extends Heavy{
+public class Truck extends Heavy {
     private double loadCapacity;
 
     public Truck(int carNumber, double carAge, int wheelsAmount, String steeringType, double exhaustPullotPerMin, int trailersAmount, double loadCapacity) {
@@ -26,5 +26,11 @@ public class Truck extends Heavy{
                 ", steeringType='" + super.getSteeringType() + '\'' +
                 ", exhaustPullotPerMin=" + super.getExhaustPullotPerMin() +
                 '}';
+    }
+
+    @Override
+    public double exhaust()
+    {
+        return 1.5 * super.exhaust();
     }
 }
