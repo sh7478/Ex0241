@@ -65,4 +65,9 @@ public class Vehicles {
                 ", exhaustPullotPerMin=" + exhaustPullotPerMin +
                 '}';
     }
+
+    public double exhaust()
+    {
+        return this.exhaustPullotPerMin * 60;
+    }
 }
