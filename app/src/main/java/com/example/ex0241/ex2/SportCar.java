@@ -9,10 +9,12 @@ public class SportCar extends Regular{
     }
 
     public int getHorsePower() {
+
         return horsePower;
     }
 
     public void setHorsePower(int horsePower) {
+
         this.horsePower = horsePower;
     }
 }
