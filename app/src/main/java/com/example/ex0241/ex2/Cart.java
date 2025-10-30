@@ -33,4 +33,9 @@ public class Cart extends Light{
     {
         return super.exhaust() - (this.chargeTime/2.0);
     }
+
+    public void hitchhikers()
+    {
+        System.out.println("hitchhikers are not welcomed to this type of vehicle");
+    }
 }

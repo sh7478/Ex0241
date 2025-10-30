@@ -38,4 +38,13 @@ public class Regular extends Vehicles{
     {
         System.out.println("The car volume is 85 decibels");
     }
+
+    public void hitchhikers()
+    {
+        int places = this.passengerAmount - 2;
+        if(places != 0)
+        {
+            System.out.println("There is " + places + " seats for hitchhikers");
+        }
+    }
 }
