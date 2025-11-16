@@ -1,7 +1,7 @@
 package com.example.ex0241.ex2;
 
 public class CementMixer extends Truck{
-    boolean haveCement;
+    private boolean haveCement;
 
     public CementMixer(int carNumber, double carAge, int wheelsAmount, String steeringType, double exhaustPullotPerMin, int trailersAmount, double loadCapacity, boolean haveCement) {
         super(carNumber, carAge, wheelsAmount, steeringType, exhaustPullotPerMin, trailersAmount, loadCapacity);

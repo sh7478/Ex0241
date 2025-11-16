@@ -18,9 +18,9 @@ public class Cart extends Light{
 
     @Override
     public String toString() {
-        return "Heavy{" +
+        return "Cart{" +
                 "chargeTime=" + this.chargeTime +
-                "carNumber=" + super.getCarNumber() +
+                ", carNumber=" + super.getCarNumber() +
                 ", carAge=" + super.getCarAge() +
                 ", wheelsAmount=" + super.getWheelsAmount() +
                 ", steeringType='" + super.getSteeringType() + '\'' +

@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public static void noiseInVehicles(Vehicles[] vehicles)
     {
-        for(Vehicles v : (Vehicles[]) vehicles)
+        for(Vehicles v : vehicles)
         {
             if(v instanceof Regular) {
                 ((Regular) v).noise();
@@ -38,10 +38,10 @@ public class MainActivity extends AppCompatActivity {
     public static int passengersInVehicles(Vehicles[] vehicles)
     {
         int passengers = 0;
-        for(Vehicles v : (Vehicles[]) vehicles)
+        for(Vehicles v : vehicles)
         {
             if(v instanceof Regular) {
-                passengers += ((Regular) v).getPassengerAmount();
+                passengers += ((Regular) v).getPassengerAmount() - 1;
             }
             else if(v instanceof Bicycle)
             {
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
     {
         double chargeTime = 0;
         int carNumber = 0;
-        for(Vehicles v : (Vehicles[]) vehicles)
+        for(Vehicles v : vehicles)
         {
             if(v instanceof Cart) {
                 if(chargeTime < ((Cart)v).getChargeTime())

@@ -17,9 +17,9 @@ public class Light extends Vehicles{
     }
     @Override
     public String toString() {
-        return "Heavy{" +
+        return "Light{" +
                 "engine=" + this.engine +
-                "carNumber=" + super.getCarNumber() +
+                ", carNumber=" + super.getCarNumber() +
                 ", carAge=" + super.getCarAge() +
                 ", wheelsAmount=" + super.getWheelsAmount() +
                 ", steeringType='" + super.getSteeringType() + '\'' +

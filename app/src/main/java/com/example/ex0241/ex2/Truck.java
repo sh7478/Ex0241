@@ -18,9 +18,9 @@ public class Truck extends Heavy {
 
     @Override
     public String toString() {
-        return "Heavy{" +
+        return "Truck{" +
                 "loadCapacity=" + this.loadCapacity +
-                "carNumber=" + super.getCarNumber() +
+                ", carNumber=" + super.getCarNumber() +
                 ", carAge=" + super.getCarAge() +
                 ", wheelsAmount=" + super.getWheelsAmount() +
                 ", steeringType='" + super.getSteeringType() + '\'' +

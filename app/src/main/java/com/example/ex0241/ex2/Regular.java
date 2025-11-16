@@ -18,9 +18,9 @@ public class Regular extends Vehicles{
 
     @Override
     public String toString() {
-        return "Heavy{" +
+        return "Regular{" +
                 "passengerAmount=" + this.passengerAmount +
-                "carNumber=" + super.getCarNumber() +
+                ", carNumber=" + super.getCarNumber() +
                 ", carAge=" + super.getCarAge() +
                 ", wheelsAmount=" + super.getWheelsAmount() +
                 ", steeringType='" + super.getSteeringType() + '\'' +

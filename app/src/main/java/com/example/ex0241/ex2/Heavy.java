@@ -19,7 +19,7 @@ public class Heavy extends Vehicles{
     public String toString() {
         return "Heavy{" +
                 "trailersAmount=" + trailersAmount +
-                "carNumber=" + super.getCarNumber() +
+                ", carNumber=" + super.getCarNumber() +
                 ", carAge=" + super.getCarAge() +
                 ", wheelsAmount=" + super.getWheelsAmount() +
                 ", steeringType='" + super.getSteeringType() + '\'' +

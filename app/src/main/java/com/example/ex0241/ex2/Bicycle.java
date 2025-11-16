@@ -18,9 +18,9 @@ public class Bicycle extends Light{
 
     @Override
     public String toString() {
-        return "Heavy{" +
+        return "Bicycle{" +
                 "basket=" + this.basket +
-                "carNumber=" + super.getCarNumber() +
+                ", carNumber=" + super.getCarNumber() +
                 ", carAge=" + super.getCarAge() +
                 ", wheelsAmount=" + super.getWheelsAmount() +
                 ", steeringType='" + super.getSteeringType() + '\'' +
