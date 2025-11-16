@@ -9,13 +9,14 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.ex0241.ex2.Bicycle;
+import com.example.ex0241.ex2.Cart;
 import com.example.ex0241.ex2.Heavy;
 import com.example.ex0241.ex2.Regular;
 import com.example.ex0241.ex2.Vehicles;
 
 public class MainActivity extends AppCompatActivity {
 
-    public double pluralExhaust(Vehicles[] vehicles)
+    public static double pluralExhaust(Vehicles[] vehicles)
     {
         double sum = 0;
         for(Vehicles v : vehicles)
@@ -24,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         }
         return sum;
     }
-    public void noiseInVehicles(Vehicles[] vehicles)
+    public static void noiseInVehicles(Vehicles[] vehicles)
     {
         for(Vehicles v : (Vehicles[]) vehicles)
         {
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public int passengersInVehicles(Vehicles[] vehicles)
+    public static int passengersInVehicles(Vehicles[] vehicles)
     {
         int passengers = 0;
         for(Vehicles v : (Vehicles[]) vehicles)
@@ -48,6 +49,23 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         return passengers;
+    }
+
+    public static int vehicleHighChargeTime(Vehicles[] vehicles)
+    {
+        double chargeTime = 0;
+        int carNumber = 0;
+        for(Vehicles v : (Vehicles[]) vehicles)
+        {
+            if(v instanceof Cart) {
+                if(chargeTime < ((Cart)v).getChargeTime())
+                {
+                    chargeTime = ((Cart)v).getChargeTime();
+                    carNumber = ((Cart)v).getCarNumber();
+                }
+            }
+        }
+        return carNumber;
     }
 
     @Override
