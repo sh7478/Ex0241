@@ -17,16 +17,20 @@ public class Kibbutz {
     public Vehicles[] getOldVehicles() {
         int i = 0;
         int j = 0;
-        for (Vehicles v : vehicles) {
+        int num = 0;
+        for (int i = 0; i < vehiclesCounter; i++) {
+            Vehicles v = vehicles[i];
             if (v.getCarAge() > 15 && v.getSteeringType().equals("wheel")) {
-                i++;
+                num++;
             }
         }
-        Vehicles[] oldVehicles = new Vehicles[i];
-        for (Vehicles v : vehicles) {
+        Vehicles[] oldVehicles = new Vehicles[num];
+        num = 0;
+        for (int j = 0; j < vehiclesCounter; j++) {
+            Vehicles v = vehicles[j];
             if (v.getCarAge() > 15 && v.getSteeringType().equals("wheel")) {
-                oldVehicles[j] = v;
-                j++;
+                oldVehicles[num] = v;
+                num++;
             }
         }
         return oldVehicles;
@@ -35,7 +39,8 @@ public class Kibbutz {
     public int vehiclesWheelSteerType()
     {
         int count = 0;
-        for (Vehicles v : vehicles) {
+        for (int i = 0; i < vehiclesCounter; i++) {
+            Vehicles v = vehicles[i];
             if((v instanceof Regular || v instanceof Light) && v.getSteeringType().equals("wheel"))
             {
                 count ++;

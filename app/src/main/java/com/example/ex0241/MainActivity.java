@@ -43,6 +43,10 @@ public class MainActivity extends AppCompatActivity {
             if(v instanceof Regular) {
                 passengers += ((Regular) v).getPassengerAmount() - 1;
             }
+            else if(v instanceof Bicycle)
+            {
+                passengers++;
+            }
         }
         return passengers;
     }
