@@ -68,6 +68,6 @@ public class Vehicles {
 
     public double exhaust()
     {
-        return this.exhaustPullotPerMin * 60;
+        return this.exhaustPullotPerMin * 60 * 24;
     }
 }

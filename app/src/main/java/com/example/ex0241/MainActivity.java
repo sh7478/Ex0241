@@ -8,17 +8,34 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.ex0241.ex2.Heavy;
+import com.example.ex0241.ex2.Regular;
+import com.example.ex0241.ex2.Vehicles;
+
 public class MainActivity extends AppCompatActivity {
+
+    public double pluralExhaust(Vehicles[] vehicles)
+    {
+        double sum = 0;
+        for(Vehicles v : vehicles)
+        {
+            sum += v.exhaust();
+        }
+        return sum;
+    }
+    public void noiseInVehicless(Vehicles[] vehicles)
+    {
+        for(Vehicles v : (Vehicles[]) vehicles)
+        {
+            if(v instanceof Regular) {
+                ((Regular) v).noise();
+            }
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
     }
 }
