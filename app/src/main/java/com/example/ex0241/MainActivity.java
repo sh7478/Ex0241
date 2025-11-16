@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                 if(chargeTime < ((Cart)v).getChargeTime())
                 {
                     chargeTime = ((Cart)v).getChargeTime();
-                    carNumber = ((Cart)v).getCarNumber();
+                    carNumber = v.getCarNumber();
                 }
             }
         }
