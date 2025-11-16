@@ -1,0 +1,120 @@
+@startuml
+class com.example.ex0241.ex2.Vehicles {
+- int carNumber
+- double carAge
+- int wheelsAmount
+- String steeringType
+- double exhaustPullotPerMin
++ int getCarNumber()
++ void setCarNumber(int)
++ double getCarAge()
++ void setCarAge(double)
++ int getWheelsAmount()
++ void setWheelsAmount(int)
++ String getSteeringType()
++ void setSteeringType(String)
++ double getExhaustPullotPerMin()
++ void setExhaustPullotPerMin(double)
++ String toString()
++ double exhaust()
+}
+
+
+class com.example.ex0241.ex2.CementMixer {
+- boolean haveCement
++ boolean isHaveCement()
++ void setHaveCement(boolean)
+}
+
+
+class com.example.ex0241.ex2.SportCar {
+- int horsePower
++ int getHorsePower()
++ void setHorsePower(int)
+}
+
+
+class com.example.ex0241.ex2.Tractor {
+- String trailerType
++ String getTrailerType()
++ void setTrailerType(String)
++ String toString()
+}
+
+
+class com.example.ex0241.ex2.Regular {
+- int passengerAmount
++ int getPassengerAmount()
++ void setPassengerAmount(int)
++ String toString()
++ double exhaust()
++ void noise()
++ void hitchhikers()
+}
+
+
+class com.example.ex0241.ex2.Light {
+- boolean engine
++ boolean isEngine()
++ void setEngine(boolean)
++ String toString()
+}
+
+
+class com.example.ex0241.ex2.Heavy {
+- int trailersAmount
++ int getTrailersAmount()
++ void setTrailersAmount(int)
++ String toString()
++ double exhaust()
+}
+
+
+class com.example.ex0241.ex2.Truck {
+- double loadCapacity
++ double getLoadCapacity()
++ void setLoadCapacity(double)
++ String toString()
++ double exhaust()
+}
+
+
+class com.example.ex0241.ex2.Bicycle {
+- boolean basket
++ boolean isBasket()
++ void setBasket(boolean)
++ String toString()
+}
+
+
+class com.example.ex0241.ex2.Kibbutz {
+- Vehicles[] vehicles
+- int vehiclesCounter
++ void addVehicle(Vehicles)
++ Vehicles[] getOldVehicles()
++ int vehiclesWheelSteerType()
+}
+
+
+class com.example.ex0241.ex2.Cart {
+- double chargeTime
++ double getChargeTime()
++ void setChargeTime(double)
++ String toString()
++ double exhaust()
++ void hitchhikers()
+}
+
+
+
+
+com.example.ex0241.ex2.Truck <|-- com.example.ex0241.ex2.CementMixer
+com.example.ex0241.ex2.Regular <|-- com.example.ex0241.ex2.SportCar
+com.example.ex0241.ex2.Heavy <|-- com.example.ex0241.ex2.Tractor
+com.example.ex0241.ex2.Vehicles <|-- com.example.ex0241.ex2.Regular
+com.example.ex0241.ex2.Vehicles <|-- com.example.ex0241.ex2.Light
+com.example.ex0241.ex2.Vehicles <|-- com.example.ex0241.ex2.Heavy
+com.example.ex0241.ex2.Heavy <|-- com.example.ex0241.ex2.Truck
+com.example.ex0241.ex2.Light <|-- com.example.ex0241.ex2.Bicycle
+com.example.ex0241.ex2.Light <|-- com.example.ex0241.ex2.Cart
+@enduml
